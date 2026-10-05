@@ -5,7 +5,7 @@ $taskOutput = Join-Path $taskRoot 'koko-github-ready.zip'
 if (Test-Path -LiteralPath $taskOutput) { throw 'Export already exists; choose a new filename before creating another export.' }
 $taskArchive = [IO.Compression.ZipFile]::Open($taskOutput, [IO.Compression.ZipArchiveMode]::Create)
 try {
-  $taskPaths = @('src','public','.github','scripts','package.json','package-lock.json','vite.config.js','index.html','README.md','PRODUCT.md','DESIGN.md','.gitignore')
+  $taskPaths = @('src','public','.github','scripts','package.json','package-lock.json','components.json','vite.config.js','index.html','README.md','PRODUCT.md','DESIGN.md','.gitignore')
   foreach ($taskPath in $taskPaths) {
     $taskItem = Get-Item -LiteralPath (Join-Path $taskRoot $taskPath)
     $taskFiles = if ($taskItem.PSIsContainer) { Get-ChildItem -LiteralPath $taskItem.FullName -File -Recurse -Force } else { @($taskItem) }

@@ -1,8 +1,9 @@
 import { Home, Search, Heart, ShoppingBag, UserRound, ArrowUpRight, Sun } from 'lucide-react';
 import { categories, products } from '../catalog';
+import BrandLogo from './brand-logo';
 
 export function MobileHeader({ home, browse, query, setQuery, showProfile }) {
-  return <header className="mobile-header"><div className="mobile-brand-row"><button className="wordmark" onClick={home} aria-label="KOKO — главная">koko<span>beauty in your pocket</span></button><button className="mobile-avatar" onClick={showProfile} aria-label="Открыть профиль"><UserRound size={22} aria-hidden="true" /></button></div><form className="mobile-search" onSubmit={e => { e.preventDefault(); browse('all', query); }}><Search size={20} aria-hidden="true" /><input type="search" placeholder="Твоя следующая beauty-находка" aria-label="Найти косметику или бренд" value={query} onChange={e => setQuery(e.target.value)} /><button aria-label="Искать" type="submit"><ArrowUpRight size={20} aria-hidden="true" /></button></form></header>;
+  return <header className="mobile-header"><div className="mobile-brand-row"><BrandLogo onClick={home} /><button className="mobile-avatar" onClick={showProfile} aria-label="Открыть профиль"><UserRound size={22} aria-hidden="true" /></button></div><form className="mobile-search" onSubmit={e => { e.preventDefault(); browse('all', query); }}><Search size={20} aria-hidden="true" /><input type="search" placeholder="Твоя следующая beauty-находка" aria-label="Найти косметику или бренд" value={query} onChange={e => setQuery(e.target.value)} /><button aria-label="Искать" type="submit"><ArrowUpRight size={20} aria-hidden="true" /></button></form></header>;
 }
 
 export function MobileHome({ concept, browse, showProfile, renderProduct }) {

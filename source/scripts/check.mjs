@@ -56,6 +56,12 @@ for (const concept of concepts) {
   assert.match(home, /промокод не действует/);
   assert.match(home, /id="promotions"/);
   assert.match(home, /Компьютерная/);
+  assert.match(home, /class="brand-logo/);
+  assert.match(home, /ÖZİNDİ SÜİ/);
+  assert.match(home, /aria-label="Информация о KOKO"/);
+  assert.match(home, /Доставка и оплата/);
+  assert.match(home, /Демо-витрина · без заказов и оплаты/);
+  assert.equal((home.match(/class="footer-group" open/g) || []).length, 3);
   globalThis.location.search = `?concept=${concept.id}&ui=desktop`;
   const desktop = renderToStaticMarkup(createElement(module.exports.default));
   assert.match(desktop, /class="desktop-ui"/);
@@ -72,6 +78,9 @@ for (const concept of concepts) {
     assert.match(mobile, /class="mobile-ui"/);
     assert.match(mobile, /Мобильная навигация/);
     assert.match(mobile, /aria-current="page"/);
+    assert.equal((mobile.match(/class="brand-logo/g) || []).length, 3);
+    assert.doesNotMatch(mobile, /class="footer-group" open/);
+    assert.match(mobile, /ÖZİNDİ SÜİ/);
     assert.doesNotMatch(mobile, /src="\/images\//);
     if (view === 'home') { assert.match(mobile, /mobile-product-rail/); assert.match(mobile, /mobile-campaign/); }
     if (view === 'catalog') assert.match(mobile, /Найдено товаров: 6/);
