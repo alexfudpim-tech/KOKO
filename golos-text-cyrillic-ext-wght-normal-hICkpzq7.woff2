@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#17171a" />
+  <meta name="description" content="Три новых интерактивных дизайна магазина косметики KOKO: Electric Market, Gloss Atelier, Skin Archive." />
+  <title>KOKO — три новых дизайна</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <script type="module" crossorigin src="./assets/index-ChmXsPuY.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BTRch53F.css">
+</head>
+<body>
+<!-- THESIS: Three complete retail worlds for KOKO; compare compositions, not color skins. OWN-WORLD: Electric white/cobalt/chartreuse with campaign mosaic; Gloss berry/blush with portrait-led magazine composition; Skin cool white/teal with product-focused care archive. STORY: discover skincare, explore the test catalog, compare and choose a design. FIRST VIEWPORT: compact comparison selector, full commerce header and an individual campaign composition with visible catalog action. FORM: competitor-standard commerce explicitly requested by the user, with three different retail compositions; direction seed 6e178754. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+  <div id="root"></div>
+</body>
+</html>
