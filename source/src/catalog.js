@@ -1,5 +1,5 @@
 export const concepts = [
-  { id: 'maison', title: 'Maison KOKO', shortTitle: 'Maison', description: 'Тёплый интерьер, натуральные фактуры и оливковый акцент', label: 'Тёплый beauty-бутик' },
+  { id: 'maison', title: 'Maison KOKO', shortTitle: 'Maison', description: 'Молочно-песочная палитра, оливковый акцент и предметная реклама косметики', label: 'Тёплый beauty-бутик' },
   { id: 'electric', title: 'Electric Market', shortTitle: 'Electric', description: 'Энергия большого beauty-магазина', label: 'Энергичный ритейл' },
   { id: 'gloss', title: 'Gloss Atelier', shortTitle: 'Gloss', description: 'Глянцевая редакция красоты', label: 'Глянцевый бутик' },
   { id: 'skin', title: 'Skin Archive', shortTitle: 'Skin', description: 'Точный и спокойный уход', label: 'Skincare-бутик' },

@@ -30,7 +30,11 @@ assert.equal(basketTotal({ banila: 2, anua: 1 }), 29300);
 assert.equal(basketTotal({}), 0);
 for (const product of products) assert.ok(existsSync(`public/${product.image}`), `Missing photo: ${product.image}`);
 for (const file of ['beauty-editorial.png', 'gloss.jpg', 'skin.jpg', 'koko-social.jpg']) assert.ok(existsSync(`public/images/${file}`));
-for (const file of ['maison-interior.png', 'maison-shelves.png', 'maison-entrance.png', 'maison-gifts.png']) assert.ok(existsSync(`public/images/${file}`));
+const referencePhotos = /maison-(interior|shelves|entrance|gifts)\.png/;
+for (const file of ['maison-interior.png', 'maison-shelves.png', 'maison-entrance.png', 'maison-gifts.png']) {
+  assert.ok(!existsSync(`public/images/${file}`), 'Reference photos must not ship');
+  assert.ok(!existsSync(`dist/images/${file}`), 'Reference photos must not enter the build');
+}
 assert.match(readFileSync('dist/index.html', 'utf8'), /6e178754/);
 const app = readFileSync('src/App.jsx', 'utf8');
 assert.match(app, /id="ingredient-archive"/);
@@ -62,7 +66,8 @@ for (const concept of concepts) {
   assert.match(home, /id="promotions"/);
   assert.match(home, /Компьютерная/);
   assert.equal((home.match(/role="tab"/g) || []).length, 4);
-  if (concept.id === 'maison') { assert.match(home, /maison-hero/); assert.match(home, /maison-interior.png/); assert.match(home, /maison-gifts.png/); }
+  assert.doesNotMatch(home, referencePhotos);
+  if (concept.id === 'maison') { assert.match(home, /maison-product-scene/); assert.match(home, /maison-product-ad/); assert.match(home, /images\/anua.jpg/); assert.match(home, /images\/cosrx.jpg/); assert.match(home, /images\/boj.jpg/); assert.match(home, /images\/banila.jpg/); }
   assert.match(home, /class="brand-logo/);
   assert.match(home, /ÖZİNDİ SÜİ/);
   assert.match(home, /aria-label="Информация о KOKO"/);
@@ -83,6 +88,7 @@ for (const concept of concepts) {
     globalThis.location = new URL(`https://preview.invalid/koko-demo/?concept=${concept.id}&ui=mobile&view=${view}`);
     const mobile = renderToStaticMarkup(createElement(module.exports.default));
     assert.match(mobile, /class="mobile-ui"/);
+    assert.doesNotMatch(mobile, referencePhotos);
     assert.match(mobile, /Мобильная навигация/);
     assert.match(mobile, /aria-current="page"/);
     assert.equal((mobile.match(/class="brand-logo/g) || []).length, 3);
@@ -101,4 +107,4 @@ for (const search of ['', '?ui=mobile', '?concept=unknown']) {
   assert.match(defaultHome, /maison-hero/);
 }
 delete globalThis.location;
-console.log('PASS: Maison default + 4 desktop concepts + 16 mobile routes, four supplied photos, search/filter, basket totals, logo/footer and demo disclosures.');
+console.log('PASS: Maison product advertising; reference photos excluded; 4 desktop concepts + 16 mobile routes, search/filter, basket totals, logo/footer and demo disclosures.');
