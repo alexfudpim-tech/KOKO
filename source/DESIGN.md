@@ -1,7 +1,12 @@
 ---
 name: KOKO Design Lab
-description: Three distinct demo storefront worlds for design comparison
+description: Four distinct demo storefront worlds; Maison KOKO is the default
 colors:
+  maison-ink: "#322b23"
+  maison-accent: "#586444"
+  maison-surface: "#f7f3ea"
+  maison-line: "#ded4c5"
+  maison-subtle: "#685d50"
   electric-ink: "#17171a"
   electric-accent: "#2554ec"
   electric-accent-hover: "#173abe"

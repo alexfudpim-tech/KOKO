@@ -7,4 +7,5 @@ import '@fontsource-variable/golos-text';
 import '@fontsource/prata/cyrillic-400.css';
 import '@fontsource/prata/latin-400.css';
 import './styles.css';
+import './maison.css';
 createRoot(document.getElementById('root')).render(<React.StrictMode><MotionConfig reducedMotion="user"><App /></MotionConfig></React.StrictMode>);

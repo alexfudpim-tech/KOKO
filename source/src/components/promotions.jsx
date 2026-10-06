@@ -1,7 +1,7 @@
 import { Sun, Copy, Gift } from 'lucide-react';
 import { products } from '../catalog';
 
-export default function Promotions({ browse, open, notify, showProfile }) {
+export default function Promotions({ concept, browse, open, notify, showProfile }) {
   async function copy() {
     try { await navigator.clipboard.writeText('BEAUTY15'); notify('BEAUTY15 скопирован. Это пример промокода, он не действует.'); }
     catch { notify('Не удалось скопировать. Пример кода: BEAUTY15 — не действует.'); }
@@ -10,7 +10,7 @@ export default function Promotions({ browse, open, notify, showProfile }) {
     <div className="section-heading"><h2>Больше поводов<br />для красоты.</h2><span className="promo-intro">Beauty edit от KOKO<br />Новый взгляд на привычный уход</span></div>
     <article className="beauty-week">
       <div className="campaign-copy"><h3>BEAUTY<br /><span>WEEK</span></h3><p>Самое время собрать<br />свою новую косметичку.</p><div className="campaign-buttons"><button className="primary-button" onClick={() => browse()}>Выбрать свой уход</button><button className="promo-code" onClick={copy}><Copy size={16} aria-hidden="true" />BEAUTY15</button></div><small>Дизайн акции: пример −15%, промокод не действует.<br />Цены в корзине не меняются.</small></div>
-      <div className="campaign-art"><img src="./images/gloss.jpg" alt="Розовый beauty-флакон в каплях воды" loading="lazy" /><span className="campaign-discount">−15%<small>ДЕМО</small></span><span className="campaign-signature">KOKO BEAUTY EDIT</span></div>
+      <div className="campaign-art"><img src={concept === 'maison' ? './images/maison-gifts.png' : './images/gloss.jpg'} alt={concept === 'maison' ? 'Подарочные пакеты KOKO с оливковыми лентами из материалов пользователя' : 'Розовый beauty-флакон в каплях воды'} loading="lazy" /><span className="campaign-discount">−15%<small>ДЕМО</small></span><span className="campaign-signature">KOKO BEAUTY EDIT</span></div>
     </article>
     <div className="promo-pair">
       <article className="promo-cleanse"><div><h3>Вечер<br />без спешки.</h3><p>Мягкое очищение.<br />Твоя любимая текстура.</p><button className="text-button" onClick={() => open(products[0])}>Знакомьтесь: Clean It Zero</button></div><img src={products[0].image} alt="Очищающий бальзам BANILA CO Clean It Zero" loading="lazy" /></article>

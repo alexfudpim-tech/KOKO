@@ -1,8 +1,10 @@
 export const concepts = [
-  { id: 'electric', title: 'Electric Market', description: 'Энергия большого beauty-магазина', label: 'Энергичный ритейл' },
-  { id: 'gloss', title: 'Gloss Atelier', description: 'Глянцевая редакция красоты', label: 'Глянцевый бутик' },
-  { id: 'skin', title: 'Skin Archive', description: 'Точный и спокойный уход', label: 'Skincare-бутик' },
+  { id: 'maison', title: 'Maison KOKO', shortTitle: 'Maison', description: 'Тёплый интерьер, натуральные фактуры и оливковый акцент', label: 'Тёплый beauty-бутик' },
+  { id: 'electric', title: 'Electric Market', shortTitle: 'Electric', description: 'Энергия большого beauty-магазина', label: 'Энергичный ритейл' },
+  { id: 'gloss', title: 'Gloss Atelier', shortTitle: 'Gloss', description: 'Глянцевая редакция красоты', label: 'Глянцевый бутик' },
+  { id: 'skin', title: 'Skin Archive', shortTitle: 'Skin', description: 'Точный и спокойный уход', label: 'Skincare-бутик' },
 ];
+export function initialConcept(search) { const value = new URLSearchParams(search).get('concept'); return concepts.some(c => c.id === value) ? value : 'maison'; }
 // Example assortment/prices from incumbent KOKO demo catalog. Not live stock.
 export const products = [
   { id: 'banila', brand: 'BANILA CO', name: 'Clean It Zero', type: 'Очищающий бальзам', volume: '100 мл', price: 9700, category: 'cleansing', color: '#f7e8ee', image: './images/banila.jpg', description: 'Первый шаг вечернего ухода. Бальзам для снятия макияжа и мягкого очищения кожи.', ingredient: 'Мягкое очищение' },

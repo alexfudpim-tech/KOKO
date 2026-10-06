@@ -1,0 +1,96 @@
+/* Maison KOKO: cream plaster, oak, espresso and the olive ribbon in the supplied photos. */
+.storefront.maison { --ink: #322b23; --accent: #586444; --surface: #f7f3ea; --line: #ded4c5; --subtle: #685d50; --brand-color: #322b23; --footer-bg: #302a23; --footer-ink: #f7f3ea; --footer-accent: #c3c9ac; }
+.swatch-maison { background: #c4b08c; }
+.maison .announcement { background: #e8dfcf; color: #453e32; }
+.maison .header-main { padding-top: 27px; padding-bottom: 25px; }
+.maison .catalog-button { background: #586444; border-radius: 2px; }
+.maison .search-form { background: #eee8dc; border: 1px solid #e0d6c6; border-radius: 2px; }
+.maison .shop-nav { justify-content: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); gap: 40px; }
+.maison .shop-nav .nav-editor-pick { margin-left: 0; }
+.maison .primary-button { background: #586444; border-radius: 2px; }
+.maison .primary-button:hover { background: #37412a; }
+.maison :focus-visible { outline-color: #586444; }
+.maison-eyebrow { display: block; font-size: 10px; letter-spacing: .17em; font-weight: 650; line-height: 1.6; color: #685d50; }
+.maison-hero-heading { display: grid; grid-template-columns: 1.5fr 1fr; align-items: end; gap: 40px; padding: 46px 56px 38px; }
+.maison-hero h1 { font-family: 'Prata', serif; font-size: clamp(38px, 4.4vw, 64px); font-weight: 400; line-height: 1.23; letter-spacing: -.045em; margin-top: 17px; }
+.maison-hero h1 i { color: #756549; font-weight: 400; }
+.maison-hero-intro { padding-bottom: 7px; }
+.maison-hero-intro p { font-size: 14px; line-height: 1.9; color: #685d50; }
+.maison-hero-intro button { margin-top: 22px; }
+.maison-hero-window { height: 480px; margin: 0 36px; position: relative; overflow: hidden; background: #e7dbc8; }
+.maison-hero-window > img { width: 100%; height: 100%; object-fit: cover; object-position: center 57%; }
+.maison-window-caption { position: absolute; left: 25px; right: 25px; bottom: 22px; display: flex; justify-content: space-between; gap: 15px; color: #322b23; background: #f7f3eae8; padding: 14px 18px; font-size: 9px; letter-spacing: .16em; line-height: 1.6; }
+.maison-signature-strip { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding: 25px 56px; border-bottom: 1px solid var(--line); }
+.maison-signature-strip > span { font-size: 13px; font-weight: 650; letter-spacing: .21em; white-space: nowrap; }
+.maison-signature-strip > p { font-size: 12px; color: #685d50; line-height: 1.7; }
+.maison-signature-strip > button { display: flex; align-items: center; gap: 10px; font-size: 12px; min-height: 44px; text-align: left; }
+.maison .category-discovery { background: #f7f3ea; padding-top: 42px; padding-bottom: 42px; border-bottom: 1px solid var(--line); }
+.maison .category-visual { background: #ebe3d4; border-radius: 50% 50% 4px 4px; }
+.maison .section-heading h2, .maison .catalog-page h1, .maison .profile-heading h1 { font-family: 'Prata', serif; font-weight: 400; letter-spacing: -.04em; }
+.maison .product-stage { background: #ede6da; border-radius: 3px; }
+.maison .product-stage img { mix-blend-mode: multiply; }
+.maison .ingredient-label { background: #f7f3ea; color: #685d50; }
+.maison .add-button { background: #586444; border-radius: 2px; }
+.maison .add-button.is-added { background: #dce2cf; color: #37412a; }
+.maison .favorite-button.is-favorite { color: #586444; }
+.maison .beauty-week { background: #586444; }
+.maison .campaign-copy h3 { font-family: 'Prata', serif; font-size: 68px; font-weight: 400; letter-spacing: -.04em; }
+.maison .campaign-copy h3 span { color: #e6dfc7; }
+.maison .campaign-buttons .primary-button { background: #f7f3ea; color: #37412a; }
+.maison .campaign-art img { object-position: center 50%; }
+.maison .campaign-discount { background: #f7f3ea; color: #586444; border-radius: 50%; font-weight: 450; }
+.maison .promo-cleanse { background: #eee4d5; }.maison .promo-sun { background: #e2e5d7; }
+.maison .promo-pair h3, .maison .beauty-club h3 { font-family: 'Prata', serif; font-weight: 400; }
+.maison .beauty-club { background: #ece5d7; }
+.maison-editorial { display: grid; grid-template-columns: 1.1fr 1fr; gap: 70px; padding-top: 65px; padding-bottom: 65px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.maison-shelves { min-width: 0; position: relative; }
+.maison-shelves > img { width: 100%; height: 100%; max-height: 750px; object-fit: cover; }
+.maison-shelves > span { position: absolute; left: 22px; right: 22px; bottom: 22px; padding: 13px; background: #f7f3eae8; font-size: 10px; letter-spacing: .12em; }
+.maison-editorial-copy { min-width: 0; padding-top: 18px; }
+.maison-editorial-copy h2 { font-family: 'Prata', serif; font-weight: 400; font-size: 39px; line-height: 1.35; letter-spacing: -.035em; margin-top: 21px; }
+.maison-editorial-copy h2 i { color: #756549; }
+.maison-editorial-copy p { font-size: 14px; line-height: 1.9; color: #685d50; max-width: 360px; margin: 24px 0 18px; }
+.maison-editorial-copy > img { width: 100%; height: 310px; object-fit: cover; object-position: center 30%; margin-top: 30px; }
+.maison-editorial-copy > small { display: block; font-size: 10px; color: #685d50; line-height: 1.7; margin-top: 10px; }
+.maison .social-section { background: #eae2d3; }.maison .social-type { color: #756549; font-family: 'Prata', serif; }
+.maison .footer-opening > p { font-family: 'Prata', serif; font-weight: 400; }
+.maison .footer-opening em { font-style: italic; }
+.maison .profile-identity, .maison .profile-quick-actions > button, .maison .profile-tabs { background: #ede5d7; }
+.maison .profile-identity-photo > span { color: #322b23; }
+.maison .profile-routine { background: #e6dfce; }
+.mobile-ui .maison .mobile-avatar { background: #e9e3d4; color: #322b23; }
+.mobile-ui .maison .mobile-search { background: #eee8dc; border-radius: 3px; }
+.mobile-ui .maison .mobile-category-rail button > span { border-radius: 50% 50% 6px 6px; background: #eee4d5 !important; }
+.mobile-ui .maison .mobile-promo { background: #586444; border-radius: 3px; }
+.mobile-ui .maison .mobile-spf { background: #e3e7d8; color: #37412a; border-radius: 3px; }
+.mobile-ui .maison .mobile-club { background: #ece4d5; border-radius: 3px; }
+.mobile-ui .maison .mobile-club button { background: #586444; color: #fff; border-radius: 2px; }
+.mobile-ui .maison .mobile-section-heading h2, .mobile-ui .maison .mobile-club h2 { font-family: 'Prata', serif; font-weight: 400; }
+.mobile-ui .maison .mobile-dock { background: #fcfaf4f5; }
+.mobile-ui .maison .mobile-dock [aria-current=page] { color: #586444; }
+@media (max-width: 900px) {
+  .maison-hero-heading { padding: 35px 28px; gap: 25px; }.maison-hero h1 { font-size: 42px; }.maison-hero-intro p { font-size: 12px; }
+  .maison-hero-window { margin: 0 20px; height: 400px; }.maison-signature-strip { padding: 20px 28px; flex-wrap: wrap; gap: 8px 22px; }
+  .maison-editorial { gap: 30px; }.maison-editorial-copy h2 { font-size: 29px; }.maison-editorial-copy p { font-size: 13px; }
+  .maison .shop-nav { justify-content: flex-start; gap: 24px; }
+}
+.mobile-ui .maison-hero-heading { display: block; padding: 16px 24px 28px; }
+.mobile-ui .maison-eyebrow { font-size: 9px; }
+.mobile-ui .maison-hero h1 { font-size: 33px; line-height: 1.25; margin-top: 13px; }
+.mobile-ui .maison-hero-intro { padding: 0; margin-top: 19px; }.mobile-ui .maison-hero-intro p { font-size: 12px; }.mobile-ui .maison-hero-intro p br { display: none; }
+.mobile-ui .maison-hero-intro button { margin-top: 17px; min-height: 46px; font-size: 12px; padding: 12px 21px; }
+.mobile-ui .maison-hero-window { height: 350px; margin: 0 16px; border-radius: 100px 100px 3px 3px; }
+.mobile-ui .maison-hero-window > img { object-position: center; }
+.mobile-ui .maison-window-caption { left: 13px; right: 13px; bottom: 13px; padding: 10px 12px; font-size: 8px; letter-spacing: .07em; }
+.mobile-ui .maison-window-caption > span:last-child { display: none; }
+.mobile-ui .maison-signature-strip { display: block; padding: 24px; }.mobile-ui .maison-signature-strip > p { margin: 13px 0 7px; font-size: 11px; }.mobile-ui .maison-signature-strip > button { font-size: 11px; }
+.mobile-ui .maison-editorial { display: block; padding: 30px 24px; }
+.mobile-ui .maison-shelves > img { height: 310px; border-radius: 2px; object-position: center 50%; }
+.mobile-ui .maison-editorial-copy { padding-top: 30px; }.mobile-ui .maison-editorial-copy h2 { font-size: 30px; margin-top: 16px; }.mobile-ui .maison-editorial-copy p { font-size: 12px; margin-top: 19px; }
+.mobile-ui .maison-editorial-copy > img { height: 300px; margin-top: 24px; object-position: center 25%; border-radius: 70px 70px 2px 2px; }
+@media (max-width: 520px) {
+  .desktop-ui .maison-hero-heading { display: block; padding: 28px 24px; }.desktop-ui .maison-hero h1 { font-size: 34px; }.desktop-ui .maison-hero-intro { margin-top: 20px; }
+  .desktop-ui .maison-hero-window { height: 330px; margin: 0 16px; }.desktop-ui .maison-signature-strip { display: block; }.desktop-ui .maison-signature-strip > p { margin-top: 15px; }
+  .desktop-ui .maison-editorial { grid-template-columns: 1fr; }.desktop-ui .maison-shelves > img { height: 350px; }
+  .maison .campaign-copy h3 { font-size: 53px; }
+}

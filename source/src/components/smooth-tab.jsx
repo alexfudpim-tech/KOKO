@@ -1,7 +1,7 @@
 /**
  * KokonutUI Smooth Tab, @dorianbaffier, MIT.
  * https://kokonutui.com/r/smooth-tab.json
- * Adapted for controlled design selection, three items, keyboard arrows,
+ * Adapted for controlled design selection, dynamic item count, keyboard arrows,
  * ResizeObserver and reduced motion. Demo wave/card content is omitted.
  */
 import { useLayoutEffect, useRef, useState } from 'react';
@@ -30,8 +30,8 @@ export default function SmoothTab({ items, selected, onChange, className, label 
     onChange(items[next].id);
     buttons.current.get(items[next].id)?.focus();
   }
-  return <div ref={container} className={cn('smooth-tabs', className)} role="tablist" aria-label={label}>
+  return <div ref={container} className={cn('smooth-tabs', className)} style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))` }} role="tablist" aria-label={label}>
     <motion.div aria-hidden="true" className="tab-highlight" initial={false} animate={{ width: dimensions.width, x: dimensions.left }} transition={reduce ? { duration: 0 } : { type: 'spring', stiffness: 400, damping: 32 }} />
-    {items.map((item, index) => <button key={item.id} ref={el => { if (el) buttons.current.set(item.id, el); else buttons.current.delete(item.id); }} id={`${idPrefix}tab-${item.id}`} role="tab" aria-selected={selected === item.id} aria-controls={`${idPrefix}panel-${item.id}`} tabIndex={selected === item.id ? 0 : -1} type="button" onKeyDown={e => key(e, index)} onClick={() => onChange(item.id)}>{swatches && <span className={`swatch swatch-${item.id}`} />}<span>{item.title}</span></button>)}
+    {items.map((item, index) => <button key={item.id} ref={el => { if (el) buttons.current.set(item.id, el); else buttons.current.delete(item.id); }} id={`${idPrefix}tab-${item.id}`} role="tab" aria-selected={selected === item.id} aria-controls={`${idPrefix}panel-${item.id}`} tabIndex={selected === item.id ? 0 : -1} aria-label={item.title} type="button" onKeyDown={e => key(e, index)} onClick={() => onChange(item.id)}>{swatches && <span className={`swatch swatch-${item.id}`} />}<span>{item.shortTitle || item.title}</span></button>)}
   </div>;
 }
